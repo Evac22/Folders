@@ -1,0 +1,30 @@
+﻿@model List<Folder>
+
+<h1>Folders Structure</h1>
+
+<ul>
+    @foreach (var folder in Model)
+    {
+        <li>
+            <a asp-action="Index" asp-route-parentId="@folder.Id">@folder.Name</a>
+        </li>
+    }
+</ul>
+
+<div class="row">
+    <div class="col-md-2 offset-md-4 m-3">
+        <div class="text-center">
+            <p>Upload options:</p>
+            <a asp-controller="Upload" asp-action="UploadFolderFromSystemDir">Upload folder from OS</a>
+            <div class="m-3"></div>
+            <a asp-controller="Upload" asp-action="UploadFolderFromExcelFile">Upload folder from Excel file</a>
+        </div>
+        <div class="m-3"></div>
+        <div class="text-center">
+            <p>Export options:</p>
+            <form method="post" asp-controller="Upload" asp-action="ExportFolderStructureToExcel">
+                <button type="submit" class="btn btn-success">Export Folders to Excel</button>
+            </form>
+        </div>
+    </div>
+</div>
