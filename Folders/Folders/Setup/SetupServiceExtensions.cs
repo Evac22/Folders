@@ -9,12 +9,9 @@ namespace Folders.Setup
         {
             services.AddDbContext<ApplicationDbContext>(options =>
             {
-                options.UseSqlServer(config.GetConnectionString("DefaultConnection"),
-                    sqlServerOptionsAction =>
-                    {
-                        sqlServerOptionsAction.EnableRetryOnFailure();
-                    });
+                options.UseSqlServer(config.GetConnectionString("DefaultConnection"));
             });
+
 
             return services;
         }

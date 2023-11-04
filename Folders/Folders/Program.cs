@@ -1,11 +1,13 @@
 using Folders.Context;
 using Folders.DatabaseInitialization;
 using Folders.Setup;
+using OfficeOpenXml;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+ExcelPackage.LicenseContext = LicenseContext.Commercial;
 
 builder.Services.AddSetupServices(builder.Configuration);
 

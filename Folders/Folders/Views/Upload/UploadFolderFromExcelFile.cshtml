@@ -1,0 +1,15 @@
+﻿﻿@{
+    ViewData["Title"] = "Upload Directories from Excel";
+}
+
+<div class="col-md-6 offset-md-3">
+    <div class="card card-body bg-light">
+        <form asp-action="UploadFolderFromExcelFile" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="file">Select an Excel file:</label>
+                <input type="file" id="file" name="file" class="form-control-file" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Upload</button>
+        </form>
+    </div>
+</div>

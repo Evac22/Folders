@@ -3,7 +3,7 @@ using Folders.Context;
 using Folders.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace UploadFolders.Controllers;
+namespace Folders.Controllers;
 
 public class HomeController : Controller
 {

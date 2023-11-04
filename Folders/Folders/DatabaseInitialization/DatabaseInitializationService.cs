@@ -3,11 +3,11 @@ using Folders.Models;
 
 namespace Folders.DatabaseInitialization
 {
-    public class DatabaseInitializationService
+    public static class DatabaseInitializationService
     {
         public static void InitializeDatabase(ApplicationDbContext context)
         {
-            if(!context.Folders.Any())
+            if (!context.Folders.Any())
             {
                 var rootFolder = new Folder { Name = "Creating Digital Images" };
                 context.Folders.Add(rootFolder);

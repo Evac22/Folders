@@ -1,0 +1,35 @@
+﻿@model Folders.Models.UploadFolder
+<div class="col-md-6 offset-md-3">
+    <div class="card card-body bg-light">
+        <form method="post">
+            <div class="container">
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-4">
+                            <label asp-for="Path">Path</label>
+                            <input asp-for="Path" class="form-control" value="D:"/>
+                            <span asp-validation-for="Path" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-4">
+                            <label asp-for="Name">Folder Name</label>
+                            <input asp-for="Name" class="form-control"/>
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="margin-top: 10px" class="col">
+                            <button type="submit" class="btn btn-sm btn-primary">Save</button>
+                        </div>
+
+                        <div style="margin-top: 10px" class="col">
+                            <a asp-action="Index" asp-controller="Home" class="btn btn-sm btn-primary">Back</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

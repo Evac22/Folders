@@ -6,7 +6,7 @@
     @foreach (var folder in Model)
     {
         <li>
-            <a asp-action="Index" asp-route-parentId="@folder.Id">@folder.Name</a>
+            <a asp-action="Index" asp-controller="Home" asp-route-parentFolderId="@folder.Id">@folder.Name</a>
         </li>
     }
 </ul>
