@@ -1,0 +1,3 @@
+To run you need to do migrations
+Add-Migration
+Update-Database
